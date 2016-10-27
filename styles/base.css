@@ -1,22 +1,38 @@
 /*
-Images, Fonts,
+Images, Fonts, Hamburger Menu, *,
 */
 
+* {
+  background-color: #EBEBEB;
+  color: #F6008B;
+}
 /******
 IMAGES
 ******/
 
 img {
-  width: 20%;
-  height: 20%;
+  width: 30%;
+  height: 60%;
+  position: relative;
+  top: -148px;
+  left: 100px;
 }
 
-/*****
-FONTS
-*****/
+/******
+HEADERS (h1, h4)
+******/
 
 h1 {
-  font-family: Acme, sans-serif;
+  font-family: 'Alegreya Sans', sans-serif;
+  text-align: center;
+  font-size: 50px;
+  margin-top: -145px;
+}
+
+h4 {
+  font-family: 'Lato' ,sans-serif;
+  font-size: 20px;
+  text-align: center;
 }
 
 /*************
@@ -25,8 +41,10 @@ Hamburger Menu
 
 #nav-icon2 {
   width: 40px;
-  height: 30px;
+  height: 50px;
   position: relative;
+  top: -40px;
+  left: -120px;
   margin: 50px auto;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -39,16 +57,12 @@ Hamburger Menu
   cursor: pointer;
 }
 
-
-#nav-icon2 {
-}
-
 #nav-icon2 span {
   display: block;
   position: absolute;
-  height: 9px;
-  width: 60%;
-  background: #d3531a;
+  height: 8px;
+  width: 50%;
+  background: #F6008B;
   opacity: 1;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -62,12 +76,12 @@ Hamburger Menu
 
 #nav-icon2 span:nth-child(even) {
   left: 50%;
-  border-radius: 0 9px 9px 0;
+  /*border-radius: 0 9px 9px 0;*/
 }
 
 #nav-icon2 span:nth-child(odd) {
   left:0px;
-  border-radius: 9px 0 0 9px;
+  /*border-radius: 9px 0 0 9px;*/
 }
 
 #nav-icon2 span:nth-child(1), #nav-icon2 span:nth-child(2) {
