@@ -1,58 +1,83 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width initial-scale=1">
-    <title>Hawa Abdi</title>
-    <!-- <link rel="stylesheet" href="vender/styles/normalize.css"> -->
-    <!-- <link rel="stylesheet" href="vendor/icons.css"> -->
-    <link rel="stylesheet" href="styles/base.css">
-    <!-- <link rel="stylesheet" href="styles/layout.css"> -->
-    <!-- <link rel="stylesheet" href="styles/modules.css"> -->
-  </head>
-  <body>
-    <header class="">
-      <nav class="main-nav">
-        <!-- Hamburger Menu -->
-        <div id="nav-icon2">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        <!-- </div>
-          <ul> -->
-            <!-- <li class="" data-content=""><a href="#" class="icon-home"> Home</a></li> -->
-            <!-- Projects, About, Contact -->
-            <!-- <li class="home">HOME</li>
-            <li class="projects">PROJECTS</li>
-            <li class="about">ABOUT</li>
-            <li class="services">SERVICES</li>
-            <li class="contact">CONTACT</li>
-          </ul>
-        </div> -->
-      </nav>
-      <section class="">
-        <img src="images/logo.png">
-        <h1>HELLO</h1>
-        <!-- <img src="images/hajabi.png"> -->
-        <h4>My name is HAWA ADBI, and I am an aspiring Full-Stack JavaScript Developer. I'm located in Seattle, Washington and hoping to put my skills to work by landing a rewarding full-stack development position.</h4>
-      </section>
-    </header>
-    <main>
-      <sections id="">
-        <article class="">
-          <header>
-            <h2></h2>
-          </header>
-        </article>
-    </main>
-    <footer>
+<head>
+  <!-- <link href="/vendor/icomoon/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hawa's Portfolio</title>
+  <link href="/styles/base.css" rel="stylesheet">
+  <link href="/styles/layout.css" rel="stylesheet">
+  <link href="/styles/modules.css" rel="stylesheet">
+  <link href="/vendor/icomoon/style.css" rel="stylesheet">
+  <script src="https://use.fontawesome.com/2866858701.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <script id="projects-templating" type="text/x-handlebars-template">
+    <div class="project-template template" data-category="{{category}}">
+        <div class="description">
+            <h5>{{title}}</h5>
+            <p></p>
+            <li><a href="{{projectLink}}"><img src="{{imagePath}}" alt=""></a></li>
+        </div>
+    </div>
+  </script>
 
-    </footer
+</head>
+<body>
+  <header class="site-header clearfix">
+    <nav class="navigation">
+      <ul>
+          <li><a id="home" href="/">Home</a></li>
+          <li><a id="about" href="/about">About</a></li>
+          <li><a id="projects" href="/project">Projects</a></li>
+          <li><a id="contact" href="#">Contact</a></li>
+      </ul>
+        <div class="nav-icon"><i class="nav-bars" aria-hidden="true"></i></div>
+      <div class="intro-container">
+          <p class="hello">Hello, I'm Hawa Abdi</p>
+          <p>An aspiring Full-Stack Web Developer</p>
+      </div>
+    </nav>
+  </header>
 
-  </body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script src="scripts/home.js"></script>
+  <div class="main-container">
+    <section class="about-section" data-category="about">
+      <h4 class="titles">About me</h4>
+        <div class="about-me-intro">
+          <span> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</span><span class="hidden-span"> exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+          <div class="contact-me">
+            <ul>
+              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.facebook.com/maryan.ahmed.5454"><i  class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="https://github.com/abdih17"><i class="fa fa-git" aria-hidden="true"></i></a></li>
+              <li><a href="mailto:abdih17@hotmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+        </div>
+    </section>
+  </div>
+
+  <!-- Script tags for vendors and pathfiles-->
+    <script src="/vendor/scripts/jquery-2.1.4.js"></script>
+    <script src="/vendor/scripts/handlebars.js"></script>
+    <script src="/vendor/scripts/marked.js"></script>
+    <script src="/vendor/scripts/html5sql.js"></script>
+    <script src="/vendor/scripts/webdb.js"></script>
+    <script src="/vendor/scripts/page.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/page.js/1.7.1/page.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script type="text/javascript" src="githubToken.js"></script>
+    <script type="text/javascript" src="data/projectData.js"></script>
+    <script type="text/javascript" src="scripts/models/projects.js"></script>
+    <script type="text/javascript" src="scripts/models/repo.js"></script>
+    <script type="text/javascript" src="scripts/views/app.js"></script>
+    <script type="text/javascript" src="scripts/views/repoView.js"></script>
+    <script type="text/javascript" src="scripts/controllers/aboutController.js"></script>
+    <script type="text/javascript" src="scripts/controllers/contactController.js"></script>
+    <script type="text/javascript" src="scripts/controllers/homeController.js"></script>
+    <script type="text/javascript" src="scripts/controller/projectsController.js"></script>
+    <script type="text/javascript" src="scripts/controllers/routes.js"></script>
+</body>
+
 </html>
