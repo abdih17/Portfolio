@@ -1,58 +1,118 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width initial-scale=1">
+    <meta charset="utf-8">
     <title>Hawa Abdi</title>
-    <!-- <link rel="stylesheet" href="vender/styles/normalize.css"> -->
-    <!-- <link rel="stylesheet" href="vendor/icons.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="vendor/styles/normalize.css">
+    <link rel="stylesheet" href="vendor/icons.css">
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/base.css">
-    <!-- <link rel="stylesheet" href="styles/layout.css"> -->
-    <!-- <link rel="stylesheet" href="styles/modules.css"> -->
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/modules.css">
+    <!--Add link to google fonts, then add to CSS base file-->
+
+<!--Beginning of handlebars template script for project articles-->
+    <script id="article-template" type="text/x-handlebars-template">
+      <article data-category="{{category}}">
+        <header class="project-header">
+          <h2>{{title}}</h2>
+          <div class="published-date">
+            <time pubdate datetime="2015-02-03">{{publishStatus}}</time>
+          </div>
+        </header>
+        <section class="project-body">{{{body}}}</section>
+        <a href="" class="read-more">Read more &rarr;</a>
+      </article>
+    </script>
+    <!--End of handlebars template script for project articles-->
+    <script id="repo-template" type="text/x-handlebars-template">
+      <li>
+        <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
+        <p>Description: {{description}}</p>
+        <p>Primary Language: {{language}}</p>
+        <p>Created: {{created_at}}</p>
+        <p>Last updated: {{updated_at}}</p>
+      </li>
+    </script>
   </head>
+
   <body>
-    <header class="">
-      <nav class="main-nav">
-        <!-- Hamburger Menu -->
-        <div id="nav-icon2">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        <!-- </div>
-          <ul> -->
-            <!-- <li class="" data-content=""><a href="#" class="icon-home"> Home</a></li> -->
-            <!-- Projects, About, Contact -->
-            <!-- <li class="home">HOME</li>
-            <li class="projects">PROJECTS</li>
-            <li class="about">ABOUT</li>
-            <li class="services">SERVICES</li>
-            <li class="contact">CONTACT</li>
-          </ul>
-        </div> -->
-      </nav>
-      <section class="">
-        <img src="images/logo.png">
-        <h1>HELLO</h1>
-        <!-- <img src="images/hajabi.png"> -->
-        <h4>My name is HAWA ADBI, and I am an aspiring Full-Stack JavaScript Developer. I'm located in Seattle, Washington and hoping to put my skills to work by landing a rewarding full-stack development position.</h4>
+    <header class="clearfix">
+      <section class="header-h1">
+        <h1>Hawa Abdi</h1>
       </section>
+      <nav id="main-nav">
+        <div class="hamburger-menu">
+          <a href="#" class="icon-menu"></a>
+        </div>
+        <ul class="nav-list">
+          <li class="tab" data-content="home"><a href="/" class="icon-home3">Home</a></li>
+          <li class="tab" data-content="about"><a href="/about" class="icon-user">About</a></li>
+          <li class="tab" data-content="projects"><a href="/projects" class="icon-folder-open">Projects</a></li>
+          <li class="tab" data-content="contact"><a href="/contact" class="icon-mail2">Contact</a></li>
+        </ul>
+      </nav>
     </header>
+
     <main>
-      <sections id="">
-        <article class="">
-          <header>
-            <h2></h2>
-          </header>
-        </article>
+      <section id="main-page-wrapper" data-content="home" class="tab-content">
+        <h2>I am aspiring Full Stack Web Developer.</h2>
+        <p>Lorem ipsum dolor sit amet, nam sem sapien ultricies lectus fusce. Amet lacus mollis nulla, mauris sapien pellentesque. Nunc risus odio aliquam maecenas molestie, aliquam lacus semper at mattis. Ornare tincidunt tincidunt lorem nunc ut euismod. Sapien phasellus hendrerit tellus, mattis in varius suscipit lectus pellentesque, est eget sed porta vehicula.</p>
+      </section>
+
+      <section id="about-me" data-content="about" class="tab-content">
+        <h2>About Me</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </section>
+
+      <section id="projects" class="tab-content" data-content="projects">
+        <h2>Projects</h2>
+        <div>
+          <ul id="filters">
+            <li>
+              <select id="category-filter">
+                <option value="">-- All categories --</option>
+              </select>
+            </li>
+          </ul>
+          <section class="github-stats">
+            <h2>GitHub Repositories:</h2>
+            <ul class="repo-stats">
+              <li>...</li>
+            </ul>
+          </section>
+        </div>
+      </section>
+
+      <section id="contact" class="tab-content" data-content="contact">
+        <h2>Shoot me an email!</h2>
+        <p>Email here...</p>
+      </section>
     </main>
+
     <footer>
+      <div class="social-media">
+        <ul>
+          <li><a href="https://github.com/abdih17" target="_blank" class="icon-github">Github</a></li>
+          <li><a href="http://twitter.com" target="_blank" class="icon-twitter">Twitter</a></li>
+          <li><a href="https://www.linkedin.com/in/hawa-abdi-40297142" target="_blank" class="icon-linkedin">LinkedIn</a></li>
+        </ul>
+      </div>
+    </footer>
 
-    </footer
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/page.js/1.7.1/page.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <script src="data/projectData.js"></script>
+    <script src="scripts/models/projects.js"></script>
+    <script src="scripts/models/repo.js"></script>
+    <script src="scripts/views/app.js"></script>
+    <script src="scripts/views/repoView.js"></script>
+    <script src="scripts/controllers/homeController.js"></script>
+    <script src="scripts/controllers/aboutController.js"></script>
+    <script src="scripts/controllers/projectsController.js"></script>
+    <script src="scripts/controllers/contactController.js"></script>
+    <script src="scripts/controllers/routes.js"></script>
   </body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script src="scripts/home.js"></script>
 </html>

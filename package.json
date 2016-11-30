@@ -1,0 +1,17 @@
+{
+  "name": "blog-app",
+  "version": "1.0.0",
+  "description": "mvc for the win!",
+  "main": "server.js",
+  "repository":"https://github.com/abdih17/Portfolio",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "abdih17@hotmail.com",
+  "license": "ISC"
+}

@@ -1,0 +1,38 @@
+#main-nav ul {
+  list-style: none;
+  float: right;
+  display: none;
+  margin-top: 2em;
+  width: 100%;
+  text-align: center;
+}
+
+.icon-menu {
+  float: right;
+  font-size: 3em;
+  margin-top: 0.40em;
+  margin-right: 5%;
+}
+
+#main-nav li {
+  display: block;
+  margin: 3%;
+}
+
+@media screen and (min-width:678px) {
+  .icon-menu {
+    display: none;
+  }
+  #main-nav ul {
+    display: block;
+    text-align: right;
+    width: 50%;
+    margin-right: 3.5%;
+  }
+  #main-nav li {
+    display: inline;
+  }
+  .nav-list {
+    display: block !important;
+  }
+}
