@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "mvc for the win!",
   "main": "server.js",
-  "repository":"https://github.com/Chaimaebettah/myPortfolio.git",
+  "repository":"https://github.com/abdih17/Portfolio",
   "dependencies": {
     "express": "^4.14.0"
   },

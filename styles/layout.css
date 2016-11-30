@@ -1,77 +1,68 @@
-.main-container{
-  margin:0 auto;
-  width:90%;
+header {
+  background-color: rgba(255,255,255,0.5);
 }
 
-.nav-icon {
-    position: absolute;
-    top: 1%;
-    right: 5%;
-    font-size: 40px;
+.clearfix::after {
+  content: " ";
+  visibility: hidden;
+  display: table;
+  clear: both;
 }
 
-.navigation {
-    color: white;
-    position: absolute;
-    top: 4%;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 1;
+#main-page-wrapper ul {
+  list-style-type: none;
+  display: block;
+  padding: 0%;
 }
 
-.navigation ul {
-    display: none
+.project-header {
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 100%;
+  width: 85%;
+  border: none;
+  border-radius: 1em;
+  margin: 0 auto;
+  margin-top: 2em;
+  padding: 1%;
 }
 
-.intro-container {
+@media screen and (min-width:678px) {
+  .project-header {
+    width: 45%;
+  }
+}
+
+#filters {
+  list-style-type: none;
   text-align: center;
-  margin-top:7%;
+  padding: 0%;
 }
 
-.navigation  a{
-    color:black;
-    padding:1%;
-    display:block;
-
-}
-.about-me-container{
+.social-media ul {
+  width: 50%;
+  margin: 0 auto;
   text-align: center;
-  display:flex;
-  flex-direction: row;
+  padding-left: 0%;
 }
 
-.image-portfolio{
- flex:1;
-
-}
-.about-me-intro{
-  flex:2;
+.social-media li {
+  display: block;
+  margin: 2%;
 }
 
-.contact-me ul{
-  display:flex;
-  flex-direction: row;
-  /*margin-left: 30%;
-  margin-top: 5%;*/
-padding-left: 18%;
-
+@media screen and (min-width:470px) {
+  .social-media li {
+    display: inline;
+    margin: 2%;
+  }
 }
 
-.contact-me ul li {
-  padding-left: 5%;
-
-
-}
-.contact-me ul li a{
-  color:rgba(29, 29, 29, 0.42);
-  font-size: 20px;
+@media screen and (min-width:575px) {
+  #main-page-wrapper li {
+    display: inline;
+  }
 }
 
-.template{
-  display:none;
-}
-
-.hidden-span{
-  display:none;
+footer {
+  background-color: rgba(255, 255, 255, 0.5);;
 }

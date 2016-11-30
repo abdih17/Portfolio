@@ -1,53 +1,83 @@
-* {
-    margin: 0;
-    padding: 0;
-    border: none;
-    text-decoration: none;
-    list-style: none;
+body {
+  line-height: 1.5;
+  font-size: 100%;
+  background-image: url(../img/mountain_biking.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: deeppink;
 }
 
 img {
-    max-width: 100%
+  max-width: 100%;
 }
 
-
-body {
-    font-family: 'Roboto', sans-serif;
+h1, h2 {
+  font-family: "Helvetica Neue", sans-serif;
+  text-align: center;
 }
 
-header {
-    position: relative;
-    height: 252px;
-    width: 100%;
-    background-color: black;
+.header-h1 {
+  float: left;
+  margin-left: 5%;
 }
 
-header:after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    content: "";
-    background-image: url("../images/P1000955.jpg");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: 100%;
-    /*height: 500px;*/
-    max-width: 100%;
-    opacity: .5;
+.project-header h2 {
+  margin: 0%;
 }
 
-.button{
-  background-color: white;
-  border:1px solid black;
-  padding:10px;
-  border-radius: 2px;
-  display: inline-block;
-  cursor: pointer;
-  user-select: none;
+#main-page-wrapper h2 {
+  font-size: 2em;
 }
-.button:active {
-  background-color: black;
-  color:white;
+
+#main-page-wrapper h2, #about-me h2 {
+    margin-top: 7em;
+}
+
+p {
+  font-size: 1em;
+  font-family: "Garamond", serif;
+}
+
+.project-body p, #about-me p, #contact p{
+  text-align: left;
+  text-indent: 2em;
+  width: 90%;
+  margin: 1em 5% 0 5%;
+}
+
+@media screen and (min-width:678px) {
+  .project-body p, #about-me p, #contact p {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1em;
+  }
+}
+
+article, #main-page-wrapper, #about-me {
+  width: 85%;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  top: -150px;
+}
+
+article, #about-me, #contact {
+  background-color: rgba(255,255,255,0.5);
+  border: none;
+  border-radius: 1em;
+  padding-bottom: 1em;
+}
+
+a, a:link, a:active {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: rgb(0, 128, 128);
+}
+*{
+  color: white;
 }

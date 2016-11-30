@@ -1,22 +1,9 @@
 (function(module) {
-  'use strict';
-  var projectsController = {};
-
-  projectsController.reveal = function () {
-    $('#about, #projects, #contact').hide();
-    $('#projects').fadeIn();
-  };
-
-  module.projectsController = projectsController;
-}(window));
-
-(function(module){
-
   var projectController = {};
 
-  projectController.reveal = function(){
-    $('section').hide();
-    $('.projects-section').fadeIn();
+  projectController.reveal = function() {
+    $('.tab-content').hide();
+    $('#projects').fadeIn();
   };
 
   module.projectController = projectController;

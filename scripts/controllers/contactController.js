@@ -1,11 +1,10 @@
 (function(module) {
-  'use strict';
   var contactController = {};
 
-  contactController.reveal = function () {
-    $('#about, #projects, #contact').hide();
+  contactController.reveal = function() {
+    $('.tab-content').hide();
     $('#contact').fadeIn();
   };
 
   module.contactController = contactController;
-}(window));
+})(window);
