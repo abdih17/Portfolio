@@ -1,13 +1,17 @@
 (function(module) {
   var repoView = {};
+
   var repoCompiler = Handlebars.compile($('#repo-template').html());
+
   repoView.renderRepos = function() {
-    $('#repos').append(
-      repos.withTheAttribute('name')
+    console.log('Callback function executed!');
+    $('.repo-stats').empty().append(
+      reposObj.withTheAttribute('name')
       .map(repoCompiler)
     );
   };
-  repos.requestRepos(repoView.renderRepos);
+
+  reposObj.requestRepos(repoView.renderRepos);
 
   module.repoView = repoView;
 })(window);

@@ -1,11 +1,10 @@
-(function(module){
+(function(module) {
+  var mainPageController = {};
 
-  var homeController = {};
-
-  homeController.reveal = function(){
-    $('section').fadeIn();
-
+  mainPageController.reveal = function() {
+    $('.tab-content').hide();
+    $('#main-page-wrapper').fadeIn();
   };
 
-  module.homeController = homeController;
+  module.mainPageController = mainPageController;
 })(window);
